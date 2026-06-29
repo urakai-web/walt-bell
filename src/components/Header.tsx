@@ -18,7 +18,7 @@ export default function Header() {
             <a href="#company" className="hover:text-orange-400 transition-colors">会社概要</a>
           </nav>
           <a
-            href="#contact"
+            href="https://line.me/ti/p/2q_qhY6gNT" target="_blank" rel="noopener noreferrer"
             className="rounded bg-green-500 px-5 py-2 text-sm font-bold transition-colors hover:bg-green-600"
           >
             LINEでお問い合わせ
@@ -48,7 +48,7 @@ export default function Header() {
             <a href="#area" onClick={() => setIsOpen(false)} className="hover:text-orange-400">対応エリア</a>
             <a href="#company" onClick={() => setIsOpen(false)} className="hover:text-orange-400">会社概要</a>
             <a
-              href="#contact"
+              href="https://line.me/ti/p/2q_qhY6gNT" target="_blank" rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="mt-1 rounded bg-green-500 px-4 py-2 text-center font-bold hover:bg-green-600"
             >

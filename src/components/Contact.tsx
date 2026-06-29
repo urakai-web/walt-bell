@@ -1,13 +1,13 @@
 export default function Contact() {
   return (
-    <section id="contact" className="bg-gray-950 py-16 text-white md:py-20">
+    <section id="contact" className="bg-gray-800 py-16 text-white md:py-20">
       <div className="mx-auto max-w-md px-6 text-center">
         <h2 className="text-2xl font-bold">お見積り・ご相談はLINEから</h2>
         <p className="mt-2 text-sm text-gray-400">24時間受付・無料</p>
 
         {/* TODO: LINEの友だち追加URLを設定 */}
         <a
-          href="#"
+          href="https://line.me/ti/p/2q_qhY6gNT" target="_blank" rel="noopener noreferrer"
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-green-500 px-10 py-4 text-lg font-bold transition-colors hover:bg-green-600"
         >
           <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">

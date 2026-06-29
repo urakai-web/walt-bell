@@ -42,7 +42,7 @@ export default function Hero() {
             </p>
             <div className="mt-8">
               <a
-                href="#contact"
+                href="https://line.me/ti/p/2q_qhY6gNT" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded bg-green-500 px-8 py-4 text-lg font-bold transition-colors hover:bg-green-600"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -70,11 +70,9 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="bg-gray-900 px-6 py-10">
-          <h1 className="text-2xl font-bold leading-tight">
-            届けたい「今」に、
-            <br />
-            応える運送会社。
+        <div className="bg-gray-800 px-6 py-10">
+          <h1 className="text-xl font-bold leading-tight">
+            届けたい「今」に、応える運送会社。
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-gray-300">
             スポットチャーター便・企業専属配送・引越しまで。
@@ -82,7 +80,7 @@ export default function Hero() {
           </p>
           <div className="mt-6">
             <a
-              href="#contact"
+              href="https://line.me/ti/p/2q_qhY6gNT" target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded bg-green-500 px-6 py-4 font-bold transition-colors hover:bg-green-600"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">

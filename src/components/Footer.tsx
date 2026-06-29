@@ -7,7 +7,7 @@ export default function Footer() {
           <a href="#reasons" className="hover:text-gray-900">選ばれる理由</a>
           <a href="#area" className="hover:text-gray-900">対応エリア</a>
           <a href="#company" className="hover:text-gray-900">会社概要</a>
-          <a href="#contact" className="hover:text-gray-900">お問い合わせ</a>
+          <a href="https://line.me/ti/p/2q_qhY6gNT" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">お問い合わせ</a>
         </nav>
         <p>&copy; {new Date().getFullYear()} 合同会社WaltBell All Rights Reserved.</p>
       </div>
