@@ -11,7 +11,7 @@ export default function Company() {
           <tbody className="divide-y divide-gray-200">
             {[
               ["会社名", "合同会社WaltBell"],
-              ["所在地", "長崎県長崎市稲佐町22-32"],
+              ["所在地", "長崎県長崎市"],
               ["代表者", "松元 龍馬"],
               ["設立", "2026年5月28日"],
               ["事業内容", "スポットチャーター便 / 企業配送 / 引越し"],
