@@ -28,7 +28,7 @@ export default function Hero() {
         ))}
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative mx-auto flex h-full max-w-6xl items-center px-6">
+        <div className="relative flex h-full items-center px-12 lg:px-24">
           <div>
             <h1 className="text-5xl font-bold leading-tight">
               届けたい「今」に、
