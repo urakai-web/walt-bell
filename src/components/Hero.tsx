@@ -62,11 +62,11 @@ export default function Hero() {
       {/* モバイル: 画像上 + テキスト下 */}
       <div className="md:hidden">
         <div className="relative aspect-[4/3] overflow-hidden">
-          {images.map((src, i) => (
+          {images.map((img, i) => (
             <img
-              key={src}
-              src={src}
-              alt=""
+              key={img.src}
+              src={img.src}
+              alt={img.alt}
               className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
                 i === current ? "opacity-100" : "opacity-0"
               }`}
