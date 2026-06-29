@@ -1,6 +1,6 @@
 export default function Company() {
   return (
-    <section id="company" className="py-20 md:py-28">
+    <section id="company" className="bg-[#fae8d4] py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <p className="text-sm font-semibold tracking-widest text-orange-500">COMPANY</p>

@@ -1,6 +1,6 @@
 export default function Area() {
   return (
-    <section id="area" className="py-20 md:py-28">
+    <section id="area" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
           <p className="text-sm font-semibold tracking-widest text-orange-500">AREA & VEHICLE</p>

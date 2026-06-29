@@ -18,7 +18,7 @@ const reasons = [
 
 export default function Reasons() {
   return (
-    <section id="reasons" className="bg-gray-50 py-20 md:py-28">
+    <section id="reasons" className="bg-[#fae8d4] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
           <p className="text-sm font-semibold tracking-widest text-orange-500">REASON</p>

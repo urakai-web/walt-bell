@@ -7,7 +7,7 @@ export default function Header() {
     <header className="bg-black text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#">
-          <img src="/images/logo.jpg" alt="WaltBell" className="h-[60px]" />
+          <img src="/images/logo.jpg" alt="WaltBell" className="h-[90px]" />
         </a>
 
         <div className="hidden items-center gap-6 md:flex">

@@ -37,11 +37,11 @@ export default function Services() {
           <h2 className="mt-2 text-3xl font-bold">サービス案内</h2>
         </div>
 
-        <div className="mt-14 flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
+        <div className="mt-14 flex gap-5 overflow-x-auto pb-4 scrollbar-hide md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
           {services.map((service) => (
             <div
               key={service.id}
-              className="min-w-[80vw] snap-center overflow-hidden rounded-lg border border-gray-200 transition-shadow hover:shadow-lg sm:min-w-[60vw] md:min-w-0"
+              className="min-w-[75vw] overflow-hidden rounded-lg border border-gray-200 transition-shadow hover:shadow-lg sm:min-w-[60vw] md:min-w-0"
             >
               {service.image ? (
                 <img
