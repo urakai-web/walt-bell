@@ -32,7 +32,7 @@ export default function Area() {
                 <p className="mt-1 text-center text-xs text-gray-500">軽バン</p>
               </div>
               <div>
-                <img src="/images/takahoro.jpg" alt="高幌車" className="h-28 w-full rounded-lg object-cover" />
+                <img src="/images/takahoro.jpg" alt="高幌車" className="h-28 w-full rounded-lg bg-gray-100 object-contain" />
                 <p className="mt-1 text-center text-xs text-gray-500">高幌車</p>
               </div>
             </div>
