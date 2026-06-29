@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 
-const images = ["/images/hero1.jpeg", "/images/hero2.jpeg", "/images/hero3.jpeg"];
+const images = [
+  { src: "/images/hero1.jpeg", alt: "WaltBellの配送スタッフ" },
+  { src: "/images/hero2.jpeg", alt: "長崎から全国への配送対応" },
+  { src: "/images/hero3.jpeg", alt: "荷物をお届けするドライバー" },
+];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+      setCurrent((p) => (p + 1) % images.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -16,11 +20,11 @@ export default function Hero() {
     <section className="text-white">
       {/* デスクトップ: 従来のオーバーレイ */}
       <div className="relative hidden h-[80vh] min-h-[500px] overflow-hidden md:block">
-        {images.map((src, i) => (
+        {images.map((img, i) => (
           <img
-            key={src}
-            src={src}
-            alt=""
+            key={img.src}
+            src={img.src}
+            alt={img.alt}
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
               i === current ? "opacity-100" : "opacity-0"
             }`}
