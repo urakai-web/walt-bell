@@ -1,40 +1,61 @@
+import { useState, useEffect } from "react";
+
+const images = ["/images/hero1.jpeg", "/images/hero2.jpeg", "/images/hero3.jpeg"];
+
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative bg-gray-900 text-white">
-      {/* TODO: 画像が必要 — ヒーロー背景画像（トラックが走っている写真など） */}
+    <section className="relative h-[70vh] min-h-[500px] overflow-hidden text-white md:h-[80vh]">
+      {images.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt=""
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
       <div className="absolute inset-0 bg-black/60" />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-40">
-        <p className="text-sm font-semibold tracking-widest text-orange-400">
-          24時間対応・当日配車OK
-        </p>
-        <h1 className="mt-3 text-3xl font-bold leading-tight md:text-5xl">
-          届けたい「今」に、
-          <br />
-          応える運送会社。
-        </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-gray-300 md:text-lg">
-          スポットチャーター便・企業専属配送・引越しまで。
-          <br className="hidden md:block" />
-          お急ぎの荷物も、毎日の配送も、WaltBellにお任せください。
-        </p>
+      <div className="relative mx-auto flex h-full max-w-6xl items-center px-6">
+        <div>
+          <h1 className="text-3xl font-bold leading-tight md:text-5xl">
+            届けたい「今」に、
+            <br />
+            応える運送会社。
+          </h1>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-gray-300 md:text-lg">
+            スポットチャーター便・企業専属配送・引越しまで。
+            <br className="hidden md:block" />
+            お急ぎの荷物も、毎日の配送も、WaltBellにお任せください。
+          </p>
 
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <a
-            href="tel:000-0000-0000"
-            className="flex items-center justify-center gap-2 rounded bg-orange-500 px-8 py-4 text-lg font-bold transition-colors hover:bg-orange-600"
-          >
-            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z" />
-            </svg>
-            000-0000-0000
-          </a>
-          <a
-            href="#contact"
-            className="rounded border-2 border-white px-8 py-4 text-center text-lg font-bold transition-colors hover:bg-white hover:text-gray-900"
-          >
-            無料お見積り・お問い合わせ
-          </a>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#contact"
+              className="flex items-center justify-center gap-2 rounded bg-green-500 px-8 py-4 text-lg font-bold transition-colors hover:bg-green-600"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.349 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+              </svg>
+              LINEで無料お見積り
+            </a>
+            <a
+              href="#services"
+              className="rounded border-2 border-white px-8 py-4 text-center text-lg font-bold transition-colors hover:bg-white hover:text-gray-900"
+            >
+              サービスを見る
+            </a>
+          </div>
         </div>
       </div>
     </section>

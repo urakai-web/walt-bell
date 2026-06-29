@@ -11,11 +11,10 @@ export default function Company() {
           <tbody className="divide-y divide-gray-200">
             {[
               ["会社名", "合同会社WaltBell"],
-              ["所在地", "〒000-0000 ○○県○○市○○ 0-0-0"],
-              ["代表者", "○○ ○○"],
-              ["設立", "○○年○○月"],
+              ["所在地", "長崎県長崎市稲佐町22-32"],
+              ["代表者", "松元 龍馬"],
+              ["設立", "2026年5月28日"],
               ["事業内容", "スポットチャーター便 / 企業配送 / 引越し"],
-              ["電話番号", "000-0000-0000"],
             ].map(([label, value]) => (
               <tr key={label}>
                 <th className="w-1/3 py-4 text-sm font-semibold text-gray-500">{label}</th>

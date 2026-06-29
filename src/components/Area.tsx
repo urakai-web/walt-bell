@@ -11,13 +11,14 @@ export default function Area() {
           <div>
             <h3 className="text-xl font-bold">対応エリア</h3>
             <p className="mt-3 leading-relaxed text-gray-600">
-              関東エリアを中心に、全国への配送に対応しております。
+              長崎を中心に、全国への配送に対応しております。
               遠方への配送もお気軽にご相談ください。
             </p>
-            {/* TODO: 画像が必要 — 対応エリアの地図画像 */}
-            <div className="mt-6 flex h-64 items-center justify-center rounded-lg bg-gray-100 text-sm text-gray-400">
-              対応エリア地図
-            </div>
+            <img
+              src="/images/area.png"
+              alt="対応エリア"
+              className="mt-6 h-64 w-full rounded-lg object-contain bg-gray-50"
+            />
           </div>
 
           <div>
@@ -25,18 +26,15 @@ export default function Area() {
             <p className="mt-3 leading-relaxed text-gray-600">
               お荷物のサイズや量に合わせて、最適な車両を手配いたします。
             </p>
-            {/* TODO: 画像が必要 — 各車両の写真（軽バン、2tトラックなど） */}
             <div className="mt-6 grid grid-cols-2 gap-4">
-              {["軽バン", "1tトラック", "2tトラック", "4tトラック"].map(
-                (vehicle) => (
-                  <div
-                    key={vehicle}
-                    className="flex h-28 items-center justify-center rounded-lg bg-gray-100 text-sm text-gray-400"
-                  >
-                    {vehicle}
-                  </div>
-                )
-              )}
+              <div>
+                <img src="/images/keiban.jpg" alt="軽バン" className="h-28 w-full rounded-lg object-cover" />
+                <p className="mt-1 text-center text-xs text-gray-500">軽バン</p>
+              </div>
+              <div>
+                <img src="/images/takahoro.jpg" alt="高幌車" className="h-28 w-full rounded-lg object-cover" />
+                <p className="mt-1 text-center text-xs text-gray-500">高幌車</p>
+              </div>
             </div>
           </div>
         </div>

@@ -4,11 +4,10 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-950 text-white">
+    <header className="bg-black text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        {/* TODO: 画像が必要 — ロゴ（白抜きver推奨） */}
-        <a href="#" className="text-xl font-bold tracking-wide">
-          WaltBell
+        <a href="#">
+          <img src="/images/logo.jpg" alt="WaltBell" className="h-[60px]" />
         </a>
 
         <div className="hidden items-center gap-6 md:flex">
@@ -20,9 +19,9 @@ export default function Header() {
           </nav>
           <a
             href="#contact"
-            className="rounded bg-orange-500 px-5 py-2 text-sm font-bold transition-colors hover:bg-orange-600"
+            className="rounded bg-green-500 px-5 py-2 text-sm font-bold transition-colors hover:bg-green-600"
           >
-            お問い合わせ
+            LINEでお問い合わせ
           </a>
         </div>
 
@@ -51,9 +50,9 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="mt-1 rounded bg-orange-500 px-4 py-2 text-center font-bold hover:bg-orange-600"
+              className="mt-1 rounded bg-green-500 px-4 py-2 text-center font-bold hover:bg-green-600"
             >
-              お問い合わせ
+              LINEでお問い合わせ
             </a>
           </div>
         </nav>
